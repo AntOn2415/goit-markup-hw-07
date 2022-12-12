@@ -440,10 +440,15 @@ body {
   background-color: var(--color-brand);
 }
 
-.footer-link {
-  max-width: 231px;
+.footer-conteiner {
+ display: flex;
+  align-items: baseline;
+  gap: 93px;
 }
 
+.footer-link {
+  min-width: 208px;
+}
 /* logo */
 .logo-footer {
   color: var(--color-logo-footer);
@@ -489,15 +494,6 @@ body {
 }
 
 /* запрошення у футорі */
-.page-footer .container {
-  display: flex;
-  /* gap: 70px; */
-  align-items: baseline;
-}
-
-.social-bloc {
-  margin-left: 70px;
-}
 
 .welcome-text {
   text-transform: uppercase;
@@ -517,15 +513,13 @@ body {
   fill: var(--color-white);
 }
 
-/* пидписаться у футері */
-.subscribe {
-  margin-left: 93px;
-}
+
 .form-footer {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
 }
 
 .form-footer > .btn-submit {
@@ -533,7 +527,6 @@ body {
   align-items: center;
   justify-content: center;
   min-width: 200px;
-  margin-left: 12px;
   fill: currentColor;
   gap: 10px;
 }
@@ -851,6 +844,7 @@ textarea {
 /* прийняття умов відправки форми */
 
 .check {
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -858,30 +852,38 @@ textarea {
 }
 
 .check > .form-label {
+  position: relative;
   margin-left: 8px;
   padding-left: 23px;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
-  
+  user-select: none;
 }
 
-.check .icon {
+/* .check .icon { */
+  .form-label .icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
   width: 16px;
   height: 15px;
-  margin-right: -23px;
-
+ 
   border: 2px solid var(--color-secondary);
   border-radius: 2px;
-background-color: var(--color-background);
+  background-color: var(--color-background);
+
+  transform: translateY(-50%);
   fill: transparent;
-transition: border-color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+  transition: border-color 250ms var(--timing-function),
+  background-color 250ms var(--timing-function);
+  cursor: pointer;
 }
 
-.checkbox:checked + .icon {
-background-color: var(--color-accent);
-border: transparent;
-fill: var(--color-background);
+  .checkbox:checked + .icon {
+  background-color: var(--color-accent);
+  border: transparent;
+  fill: var(--color-background);
 }
 
 /* прихований чекет */
@@ -898,7 +900,6 @@ fill: var(--color-background);
   margin: -1px;
 }
 
-
 .policy {
   color: var(--color-accent);
   transition: color 250ms var(--timing-function);
@@ -909,9 +910,8 @@ fill: var(--color-background);
   color: var(--color-activ-btn);
 }
 
-
 /* кнопка відправки форми */
- .btn-submit {
+.btn-submit {
   display: flex;
   align-items: center;
   justify-content: center;
