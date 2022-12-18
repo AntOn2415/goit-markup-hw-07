@@ -1,82 +1,5 @@
-:root {
-  /* шрифти */
-  --font-family-primary: "Roboto", sans-serif;
-  --font-weight-more: 700;
-  --font-weight-less: 500;
-  --font-size-more: 16px;
-  --font-size-less: 14px;
 
-  /* колор */
-  --color-primary: #757575;
-  --color-secondary: #212121;
-  --color-brand: #2f303a;
-  --color-img-overlay: rgba(47, 48, 58, 0.4);
-  --color-accent: #2196f3;
-  --top-line-bg: #ffffff;
-  --color-background: #ffffff;
-  --color-background-light: #f5f4fa;
-  --color-logo: #000000;
-  --color-logo-link--light: #ffffff;
-  --color-hero: #ffffff;
-  --color-white: #ffffff;
-  --color-activ-btn: #188ce8;
-  --color-header-border: #ececec;
-  --color-border-box: #eeeeee;
-  --color-icon: #afb1b8;
-  --color-contact-footer: rgba(255, 255, 255, 0.6);
-  /* анімація */
-  --color-background-box: rgba(33, 150, 243, 0.9);
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  /*  */
-  --fill-icon-dark: #212121;
 
-  /* форми */
-  --border-form: 1px solid rgba(33, 33, 33, 0.2);
-}
-
-/* спадкодавець */
-body {
-  background-color: var(--color-background);
-  color: var(--color-primary);
-  font-family: var(--font-family-primary);
-  margin: 0;
-}
-
-/* скидання властивості стилей */
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.link {
-  text-decoration: none;
-}
-
-/* кнопка загальні властивості */
-.button {
-  border: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 13px 0;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 4px;
-  font-family: inherit;
-  font-weight: var(--font-weight-more);
-
-  font-size: var(--font-size-more);
-  color: var(--color-white);
-  background-color: var(--color-accent);
-  transition: background-color 250ms var(--timing-function);
-}
 
 /* Порядок оформлення стилів:
 1. Позиціювання єлементів
@@ -84,39 +7,18 @@ img {
 3. Кольор та текст
 4. Ефекти (аніації, переходи) */
 
-/* Оформлення блоків */
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 15px;
-}
-
 /* heder */
 .top-line {
   background-color: var(--top-line-bg);
   border-bottom: 1px solid var(--color-header-border);
 }
 
-/*  сондейнер для хедера */
+/*  контейнер для хедера */
 .header-line {
   display: flex;
 }
 
-/*logo*/
-.logo-link__accent {
-  color: var(--color-accent);
-}
 
-.logo-link {
-  margin-right: 93px;
-  color: var(--color-logo);
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  text-decoration: none;
-}
 
 /* Site nav*/
 .site-nav {
@@ -211,10 +113,14 @@ img {
   max-width: 1600px;
   margin: 0 auto;
   background-color: var(--color-brand);
-  background-image: linear-gradient(to right, var(--color-img-overlay), var(--color-img-overlay)),
+  background-image: linear-gradient(
+      to right,
+      var(--color-img-portfolio__overlay),
+      var(--color-img-portfolio__overlay)
+    ),
     url(../images/studio/Img-team.jpeg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: portfolio__cover;
   background-position: center;
 }
 
@@ -252,20 +158,6 @@ img {
 }
 
 /* переваги студії */
-
-/* прихований заголовок */
-.section__title--visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
 
 .advantage__set {
   display: flex;
@@ -568,14 +460,14 @@ img {
 
 /* porfolio */
 /* кнопки фільтр */
-.btn-line {
+.btn-set {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
   gap: 8px;
 }
 
-.button-filter {
+.btn-set__btn-filter {
   padding: 6px 22px;
   color: var(--color-secondary);
   background: var(--color-background-light);
@@ -586,15 +478,15 @@ img {
     box-shadow 250ms var(--timing-function);
 }
 
-.button-filter:hover,
-.button-filter:focus {
+.btn-set__btn-filter:hover,
+.btn-set__btn-filter:focus {
   background-color: var(--color-accent);
   color: var(--color-white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.button-filter:active {
+.btn-set__btn-filter:active {
   background-color: var(--color-activ-btn);
 }
 
@@ -604,17 +496,17 @@ img {
   flex-wrap: wrap;
   gap: 30px;
 }
-.portfolio-box {
+.portfolio__box {
   flex-basis: calc((100% - 60px) / 3);
   transition: box-shadow 250ms var(--timing-function);
 }
 
 /* обкладинка */
-.cover {
+.portfolio__cover {
   position: relative;
   overflow: hidden;
 }
-.overlay {
+.portfolio__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -627,17 +519,17 @@ img {
   transition: transform 250ms var(--timing-function);
 }
 
-.portfolio-box:hover .overlay {
+.portfolio__box:hover .portfolio__overlay {
   transform: translateY(0);
 }
 
-.overlay:hover,
-.overlay:focus {
+.portfolio__overlay:hover,
+.portfolio__overlay:focus {
   transform: translateY(0);
 }
 
 /* опис роботи */
-.job-description {
+.portfolio__job-description {
   margin: 0;
   color: var(--color-white);
   padding: 63px 24px;
@@ -646,19 +538,19 @@ img {
   letter-spacing: 0.03em;
 }
 
-.text-content {
+.portfolio__text-content {
   padding: 20px 24px;
   border: 1px solid var(--color-border-box);
   border-top: 0;
 }
 
-.portfolio-box:hover,
-.portfolio-box:focus {
+.portfolio__box:hover,
+.portfolio__box:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.box-subtitle {
+.portfolio__subtitle {
   margin: 0;
   color: var(--color-secondary);
   font-weight: var(--font-weight-more);
@@ -670,7 +562,7 @@ img {
   text-overflow: ellipsis;
 }
 
-.desc {
+.portfolio__desc {
   margin: 0;
   margin-top: 4px;
   color: var(--color-primary);
@@ -721,7 +613,7 @@ img {
   transition: transform 250ms var(--timing-function);
 }
 
-.form__btn-close {
+.btn-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -740,9 +632,9 @@ img {
   transition: fill 250ms var(--timing-function);
 }
 
-.form__btn-close:hover,
-.form__btn-close:focus {
- fill: (--color-accent);
+.btn-close:hover,
+.btn-close:focus {
+  fill: var(--color-accent);
 }
 
 /* оформляння форм */
@@ -794,7 +686,7 @@ textarea {
   transition: border 250ms var(--timing-function);
 }
 
-.form__field .form-textarea {
+.form__field .form__textarea {
   padding: 12px 16px;
   border: var(--border-form);
   border-radius: 4px;
@@ -802,18 +694,18 @@ textarea {
   transition: border 250ms var(--timing-function);
 }
 
-.form__field .form-textarea::placeholder {
+.form__field .form__textarea::placeholder {
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-comment {
+.form__comment {
   margin-bottom: 20px;
 }
 
-.form__field > .icon {
+.form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -824,8 +716,8 @@ textarea {
 
 .form__input:hover,
 .form__input:focus,
-.form-textarea:hover,
-.form-textarea:focus {
+.form__textarea:hover,
+.form__textarea:focus {
   border: 1px solid var(--color-accent);
   outline: none;
 }
@@ -837,14 +729,14 @@ textarea {
 
 /* прийняття умов відправки форми */
 
-.check {
+.checkbox {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 0 30px;
 }
 
-.check > .form__label {
+.checkbox__label {
   position: relative;
   margin-left: 8px;
   padding-left: 23px;
@@ -853,8 +745,8 @@ textarea {
   letter-spacing: 0.03em;
 }
 
-/* .check .icon { */
-.form__icon {
+/* checkbox__icon { */
+.checkbox__icon {
   position: absolute;
   top: 50%;
   left: 0;
@@ -872,14 +764,14 @@ textarea {
   cursor: pointer;
 }
 
-.checkbox:checked + .icon {
+.checkbox__input:checked + .checkbox__icon {
   background-color: var(--color-accent);
   border: transparent;
   fill: var(--color-background);
 }
 
 /* прихований чекет */
-.check .checkbox {
+.checkbox__input {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -892,13 +784,13 @@ textarea {
   margin: -1px;
 }
 
-.policy {
+.checkbox__policy {
   color: var(--color-accent);
   transition: color 250ms var(--timing-function);
 }
 
-.policy:hover,
-.policy:focus {
+.checkbox__policy:hover,
+.checkbox__policy:focus {
   color: var(--color-activ-btn);
 }
 
@@ -907,7 +799,11 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px 0;
   min-width: 200px;
   margin-left: auto;
   margin-right: auto;
+
+  line-height: 1.875;
+  letter-spacing: 0.06em;
 }

@@ -1,0 +1,13 @@
+// змінні
+@import "./utils/variables";
+@import "./utils/placeholders";
+
+// спадкодавець
+@import "./base/testator";
+
+// скидання властивостей
+@import "./base/reset";
+
+// компоненти
+@import "./components/container";
+@import "./components/header";

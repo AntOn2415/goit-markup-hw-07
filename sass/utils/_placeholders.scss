@@ -1,0 +1,32 @@
+/* кнопка загальні властивості */
+%button {
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 13px 0;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: var(--font-weight-more);
+
+  font-size: var(--font-size-more);
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  transition: background-color 250ms var(--timing-function);
+}
+
+/* прихований */
+%visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
