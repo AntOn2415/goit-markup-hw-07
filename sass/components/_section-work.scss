@@ -1,0 +1,34 @@
+/* чим ми займаемося */
+.section-work {
+  padding-top: 0;
+}
+
+
+.section-work__set {
+  display: flex;
+  gap: 30px;
+}
+.section-work__foto {
+  position: relative;
+}
+
+.section-work__overley {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.section-work__subtitle {
+  padding: 27px 0;
+  margin: 0;
+  color: var(--color-white);
+  font-size: var(--font-size-less);
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+}
