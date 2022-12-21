@@ -234,7 +234,7 @@ img {
 }
 
 /* кнопка загальні властивості */
-.btn-submit, .btn-set__btn-filter, .hero__btn {
+.form__submit, .btn-set__btn-filter, .btn-submit, .hero__btn {
   border: none;
   margin-top: 0;
   margin-bottom: 0;
@@ -251,12 +251,13 @@ img {
   font-family: inherit;
   font-weight: var(--font-weight-more);
   font-size: var(--font-size-more);
+  letter-spacing: 0.06em;
   color: var(--color-white);
   background-color: var(--color-accent);
   -webkit-transition: background-color 250ms var(--timing-function);
   transition: background-color 250ms var(--timing-function);
 }
-.btn-submit:hover, .btn-set__btn-filter:hover, .hero__btn:hover, .btn-submit:focus, .btn-set__btn-filter:focus, .hero__btn:focus {
+.form__submit:hover, .btn-set__btn-filter:hover, .btn-submit:hover, .hero__btn:hover, .form__submit:focus, .btn-set__btn-filter:focus, .btn-submit:focus, .hero__btn:focus {
   background-color: var(--color-activ-btn);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -272,6 +273,16 @@ img {
 
 /* активна кнопка в герої*/
 .btn-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 200px;
   fill: currentColor;
   gap: 10px;
 }
@@ -297,6 +308,7 @@ img {
   background: var(--color-background-light);
   font-weight: var(--font-weight-less);
   line-height: 1.625;
+  letter-spacing: 0.03em;
   -webkit-transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
@@ -313,7 +325,7 @@ img {
 }
 
 /* кнопка відправки форми */
-.btn-submit {
+.form__submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,12 +335,11 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px 0;
   min-width: 200px;
+  padding: 10px 0;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.875;
-  letter-spacing: 0.06em;
 }
 
 /* hero */
@@ -905,6 +916,10 @@ textarea {
   -webkit-transition: border 250ms var(--timing-function);
   transition: border 250ms var(--timing-function);
 }
+.form__input:hover, .form__input:focus {
+  border: 1px solid var(--color-accent);
+  outline: none;
+}
 
 .form__textarea {
   padding: 12px 16px;
@@ -943,6 +958,26 @@ textarea {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+.form__textarea::-webkit-input-placeholder:hover, .form__textarea::-webkit-input-placeholder:focus {
+  border: 1px solid var(--color-accent);
+  outline: none;
+}
+.form__textarea::-moz-placeholder:hover, .form__textarea::-moz-placeholder:focus {
+  border: 1px solid var(--color-accent);
+  outline: none;
+}
+.form__textarea:-ms-input-placeholder:hover, .form__textarea:-ms-input-placeholder:focus {
+  border: 1px solid var(--color-accent);
+  outline: none;
+}
+.form__textarea::-ms-input-placeholder:hover, .form__textarea::-ms-input-placeholder:focus {
+  border: 1px solid var(--color-accent);
+  outline: none;
+}
+.form__textarea::placeholder:hover, .form__textarea::placeholder:focus {
+  border: 1px solid var(--color-accent);
+  outline: none;
+}
 
 .form__comment {
   margin-bottom: 20px;
@@ -958,14 +993,6 @@ textarea {
 }
 .form__field:hover > .form__icon, .form__field:focus-within > .form__icon {
   fill: var(--color-accent);
-}
-
-.form__input:hover,
-.form__input:focus,
-.form__textarea:hover,
-.form__textarea:focus {
-  border: 1px solid var(--color-accent);
-  outline: none;
 }
 
 /* прийняття умов відправки форми */

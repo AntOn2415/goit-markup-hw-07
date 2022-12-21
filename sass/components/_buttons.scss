@@ -9,8 +9,8 @@
   border-radius: 4px;
   font-family: inherit;
   font-weight: var(--font-weight-more);
-
   font-size: var(--font-size-more);
+  letter-spacing: 0.06em;
   color: var(--color-white);
   background-color: var(--color-accent);
   transition: background-color 250ms var(--timing-function);
@@ -34,8 +34,12 @@
 
 // Кнопка  підписатися у футорі
 .btn-submit {
+  @extend %button;
+  @include centeringFlex();
+  min-width: 200px;
   fill: currentColor;
   gap: 10px;
+
 }
 
 /* кнопки фільтр порфолио */
@@ -52,7 +56,7 @@
   background: var(--color-background-light);
   font-weight: var(--font-weight-less);
   line-height: 1.625;
-
+  letter-spacing: 0.03em;
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function),
     box-shadow 250ms var(--timing-function);
 
@@ -70,14 +74,12 @@
 }
 
 /* кнопка відправки форми */
-.btn-submit {
+.form__submit {
   @extend %button;
   @include centeringFlex();
-  padding: 10px 0;
   min-width: 200px;
+  padding: 10px 0;
   margin-left: auto;
   margin-right: auto;
-
   line-height: 1.875;
-  letter-spacing: 0.06em;
 }
