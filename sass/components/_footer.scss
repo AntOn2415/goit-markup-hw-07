@@ -36,14 +36,11 @@
 
   transition: color 250ms var(--timing-function);
 
-&:hover,
-&:focus {
-  color: var(--color-accent);
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
 }
-
-}
-
-
 
 .address__contact {
   color: var(--color-contact-footer);
@@ -53,14 +50,11 @@
   line-height: 1.714;
   transition: color 250ms var(--timing-function);
 
-&:hover,
-&:focus {
-  color: var(--color-accent);
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
 }
-
-}
-
-
 
 /* запрошення у футорі */
 
@@ -93,11 +87,8 @@
   letter-spacing: 0.03em;
   outline: none;
   color: var(--color-white);
-  /* color: var(--color-contact-footer); */
 
   &::placeholder {
-  color: var(--color-contact-footer);
+    color: var(--color-contact-footer);
+  }
 }
-}
-
-

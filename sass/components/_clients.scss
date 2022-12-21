@@ -24,9 +24,11 @@
   border-radius: 4px;
 
   transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
-}
 
-.clients__icon:hover {
+  &:hover {
   fill: var(--color-accent);
   border-color: var(--color-accent);
 }
+}
+
+

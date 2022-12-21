@@ -17,7 +17,7 @@
 }
 
 .modal {
-   @extend %modal;
+  @extend %modal;
   max-width: 528px;
   max-height: 581px;
 
@@ -45,11 +45,11 @@
   color: var(--color-icon);
 
   transition: fill 250ms var(--timing-function);
-}
 
-.btn-close:hover,
-.btn-close:focus {
-  fill: var(--color-accent);
+  &:hover,
+  &:focus {
+    fill: var(--color-accent);
+  }
 }
 
 /* оформляння форм */
@@ -108,14 +108,12 @@ textarea {
 
   transition: border 250ms var(--timing-function);
 
-  
-}
-
-.form__textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.167;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .form__comment {
@@ -129,6 +127,11 @@ textarea {
   fill: var(--fill-icon-dark);
 
   transition: fill 250ms var(--timing-function);
+
+  .form__field:hover > &,
+  .form__field:focus-within > & {
+    fill: var(--color-accent);
+  }
 }
 
 .form__input:hover,
@@ -137,11 +140,6 @@ textarea {
 .form__textarea:focus {
   border: 1px solid var(--color-accent);
   outline: none;
-}
-
-.form__field:hover > .form__icon,
-.form__field:focus-within > .form__icon {
-  fill: var(--color-accent);
 }
 
 /* прийняття умов відправки форми */
@@ -177,12 +175,12 @@ textarea {
   transition: border-color 250ms var(--timing-function),
     background-color 250ms var(--timing-function);
   cursor: pointer;
-}
 
-.checkbox__input:checked + .checkbox__icon {
-  background-color: var(--color-accent);
-  border: transparent;
-  fill: var(--color-background);
+  .checkbox__input:checked + & {
+    background-color: var(--color-accent);
+    border: transparent;
+    fill: var(--color-background);
+  }
 }
 
 /* прихований чекет */
@@ -193,9 +191,9 @@ textarea {
 .checkbox__policy {
   color: var(--color-accent);
   transition: color 250ms var(--timing-function);
-}
 
-.checkbox__policy:hover,
-.checkbox__policy:focus {
-  color: var(--color-activ-btn);
+  &:hover,
+  &:focus {
+    color: var(--color-activ-btn);
+  }
 }

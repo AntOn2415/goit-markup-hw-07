@@ -171,12 +171,9 @@ img {
   -webkit-transition: color 250ms var(--timing-function);
   transition: color 250ms var(--timing-function);
 }
-
-.site-nav__link:hover,
-.site-nav__link:focus {
+.site-nav__link:hover, .site-nav__link:focus {
   color: var(--color-accent);
 }
-
 .site-nav__link.current {
   color: var(--color-accent);
 }
@@ -191,7 +188,6 @@ img {
 .current {
   position: relative;
 }
-
 .current::after {
   content: "";
   position: absolute;
@@ -581,7 +577,6 @@ img {
   -webkit-transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
   transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
-
 .clients__icon:hover {
   fill: var(--color-accent);
   border-color: var(--color-accent);
@@ -686,7 +681,6 @@ img {
   letter-spacing: 0.03em;
   outline: none;
   color: var(--color-white);
-  /* color: var(--color-contact-footer); */
 }
 .form-footer__input::-webkit-input-placeholder {
   color: var(--color-contact-footer);
@@ -722,6 +716,10 @@ img {
   transition: box-shadow 250ms var(--timing-function);
   transition: box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
 }
+.portfolio__box:hover, .portfolio__box:focus {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 /* обкладинка */
 .portfolio__cover {
@@ -744,14 +742,11 @@ img {
   transition: transform 250ms var(--timing-function);
   transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
-
 .portfolio__box:hover .portfolio__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
-
-.portfolio__overlay:hover,
-.portfolio__overlay:focus {
+.portfolio__overlay:hover, .portfolio__overlay:focus {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -770,12 +765,6 @@ img {
   padding: 20px 24px;
   border: 1px solid var(--color-border-box);
   border-top: 0;
-}
-
-.portfolio__box:hover,
-.portfolio__box:focus {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio__subtitle {
@@ -856,9 +845,7 @@ img {
   -webkit-transition: fill 250ms var(--timing-function);
   transition: fill 250ms var(--timing-function);
 }
-
-.btn-close:hover,
-.btn-close:focus {
+.btn-close:hover, .btn-close:focus {
   fill: var(--color-accent);
 }
 
@@ -926,35 +913,30 @@ textarea {
   -webkit-transition: border 250ms var(--timing-function);
   transition: border 250ms var(--timing-function);
 }
-
 .form__textarea::-webkit-input-placeholder {
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .form__textarea::-moz-placeholder {
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .form__textarea:-ms-input-placeholder {
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .form__textarea::-ms-input-placeholder {
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .form__textarea::placeholder {
   font-size: 12px;
   line-height: 1.167;
@@ -974,6 +956,9 @@ textarea {
   -webkit-transition: fill 250ms var(--timing-function);
   transition: fill 250ms var(--timing-function);
 }
+.form__field:hover > .form__icon, .form__field:focus-within > .form__icon {
+  fill: var(--color-accent);
+}
 
 .form__input:hover,
 .form__input:focus,
@@ -981,11 +966,6 @@ textarea {
 .form__textarea:focus {
   border: 1px solid var(--color-accent);
   outline: none;
-}
-
-.form__field:hover > .form__icon,
-.form__field:focus-within > .form__icon {
-  fill: var(--color-accent);
 }
 
 /* прийняття умов відправки форми */
@@ -1028,7 +1008,6 @@ textarea {
   transition: border-color 250ms var(--timing-function), background-color 250ms var(--timing-function);
   cursor: pointer;
 }
-
 .checkbox__input:checked + .checkbox__icon {
   background-color: var(--color-accent);
   border: transparent;
@@ -1041,8 +1020,6 @@ textarea {
   -webkit-transition: color 250ms var(--timing-function);
   transition: color 250ms var(--timing-function);
 }
-
-.checkbox__policy:hover,
-.checkbox__policy:focus {
+.checkbox__policy:hover, .checkbox__policy:focus {
   color: var(--color-activ-btn);
 }/*# sourceMappingURL=main.css.map */

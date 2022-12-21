@@ -12,10 +12,10 @@
   font-weight: var(--font-weight-more);
   font-size: 36px;
   line-height: 1.2;
-}  
+}
 
 .section__title--visually-hidden {
-@extend %visually-hidden;
+  @extend %visually-hidden;
 }
 
 .section__subtitle {
@@ -33,4 +33,3 @@
   font-size: var(--font-size-less);
   line-height: 1.714;
 }
-
