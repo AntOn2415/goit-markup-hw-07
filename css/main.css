@@ -98,7 +98,6 @@ img {
   text-decoration: none;
 }
 
-/* Оформлення блоків */
 .container {
   width: 1200px;
   margin-left: auto;
@@ -106,20 +105,17 @@ img {
   padding: 0 15px;
 }
 
-/* heder */
 .top-line {
   background-color: var(--top-line-bg);
   border-bottom: 1px solid var(--color-header-border);
 }
 
-/*  контейнер для хедера */
 .header-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/*logo*/
 .logo-link__accent {
   color: var(--color-accent);
 }
@@ -199,7 +195,6 @@ img {
   background-color: var(--color-accent);
 }
 
-/*contact*/
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -208,7 +203,6 @@ img {
   gap: 50px;
 }
 
-/* Мейл. тел. */
 .contact__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -227,7 +221,6 @@ img {
   color: var(--color-accent);
 }
 
-/* іконки мейл. тел. */
 .contact__icon {
   -ms-flex-item-align: center;
       align-self: center;
@@ -285,6 +278,7 @@ img {
   min-width: 200px;
   fill: currentColor;
   gap: 10px;
+  background-color: red;
 }
 
 /* кнопки фільтр порфолио */
@@ -342,7 +336,6 @@ img {
   line-height: 1.875;
 }
 
-/* hero */
 .hero {
   text-align: center;
   padding-top: 200px;
@@ -401,7 +394,6 @@ img {
   line-height: 1.714;
 }
 
-/* переваги студії */
 .advantage__set {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -593,7 +585,6 @@ img {
   border-color: var(--color-accent);
 }
 
-/* futer */
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -614,7 +605,6 @@ img {
   min-width: 208px;
 }
 
-/* address */
 .address {
   margin-top: 20px;
 }
@@ -653,7 +643,6 @@ img {
   color: var(--color-accent);
 }
 
-/* запрошення у футорі */
 .welcome-text {
   text-transform: uppercase;
   font-size: var(--font-size-less);
@@ -709,7 +698,6 @@ img {
   color: var(--color-contact-footer);
 }
 
-/* список робіт */
 .portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -732,7 +720,6 @@ img {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-/* обкладинка */
 .portfolio__cover {
   position: relative;
   overflow: hidden;
@@ -762,7 +749,6 @@ img {
           transform: translateY(0);
 }
 
-/* опис роботи */
 .portfolio__job-description {
   margin: 0;
   color: var(--color-white);
@@ -860,8 +846,6 @@ img {
   fill: var(--color-accent);
 }
 
-/* оформляння форм */
-/* форми у модальному вікні */
 textarea {
   resize: none;
 }
@@ -995,7 +979,6 @@ textarea {
   fill: var(--color-accent);
 }
 
-/* прийняття умов відправки форми */
 .checkbox {
   display: -webkit-box;
   display: -ms-flexbox;

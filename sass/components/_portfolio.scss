@@ -1,6 +1,6 @@
-// * portfolio */
+// portfolio
 
-/* список робіт */
+// список робіт
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -17,7 +17,7 @@
   }
 }
 
-/* обкладинка */
+// обкладинка 
 .portfolio__cover {
   position: relative;
   overflow: hidden;
@@ -44,7 +44,7 @@
   }
 }
 
-/* опис роботи */
+// опис роботи 
 .portfolio__job-description {
   margin: 0;
   color: var(--color-white);

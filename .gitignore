@@ -105,8 +105,3 @@ dist
 
 .DS_Store
 
-.vscode
-
-.idea
-
-*.psd
