@@ -2,11 +2,16 @@
 .site-nav {
   display: flex;
   align-items: center;
-}
 
-.site-nav__list {
-  display: flex;
-  gap: 50px;
+  &__list {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__item {
+    text-decoration: unset;
+    text-decoration-line: var(--color-accent);
+  }
 }
 
 .site-nav__link {
@@ -17,10 +22,6 @@
   font-size: var(--font-size-less);
   line-height: 1.143;
   transition: color 250ms var(--timing-function);
-}
-
-.site-nav__link {
-  transition: color 250ms var(--timing-function);
 
   &:hover,
   &:focus {
@@ -29,11 +30,6 @@
   &.current {
     color: var(--color-accent);
   }
-}
-
-.site-nav__item {
-  text-decoration: unset;
-  text-decoration-line: var(--color-accent);
 }
 
 /* риска під посиланням навигації */

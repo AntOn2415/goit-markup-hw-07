@@ -5,7 +5,48 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+
+  // обкладинка
+  &__cover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  // опис роботи
+  &__job-description {
+    color: var(--color-white);
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.555;
+    letter-spacing: 0.03em;
+  }
+
+  &__text-content {
+    padding: 20px 24px;
+    border: 1px solid var(--color-border-box);
+    border-top: 0;
+  }
+
+  &__subtitle {
+    color: var(--color-secondary);
+    font-weight: var(--font-weight-more);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__desc {
+    margin-top: 4px;
+    color: var(--color-primary);
+    font-size: var(--font-size-more);
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+  }
 }
+
 .portfolio__box {
   flex-basis: calc((100% - 60px) / 3);
   transition: box-shadow 250ms var(--timing-function);
@@ -17,11 +58,7 @@
   }
 }
 
-// обкладинка 
-.portfolio__cover {
-  position: relative;
-  overflow: hidden;
-}
+// обкладинка
 .portfolio__overlay {
   position: absolute;
   top: 0;
@@ -42,41 +79,4 @@
   &:focus {
     transform: translateY(0);
   }
-}
-
-// опис роботи 
-.portfolio__job-description {
-  margin: 0;
-  color: var(--color-white);
-  padding: 63px 24px;
-  font-size: 18px;
-  line-height: 1.555;
-  letter-spacing: 0.03em;
-}
-
-.portfolio__text-content {
-  padding: 20px 24px;
-  border: 1px solid var(--color-border-box);
-  border-top: 0;
-}
-
-.portfolio__subtitle {
-  margin: 0;
-  color: var(--color-secondary);
-  font-weight: var(--font-weight-more);
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.portfolio__desc {
-  margin: 0;
-  margin-top: 4px;
-  color: var(--color-primary);
-  font-size: var(--font-size-more);
-  line-height: 1.875;
-  letter-spacing: 0.03em;
 }

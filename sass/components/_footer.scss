@@ -1,4 +1,4 @@
-// futer 
+// futer
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -19,14 +19,15 @@
 // address
 .address {
   margin-top: 20px;
+
+  &__item {
+    margin-bottom: 9px;
+  }
+  &__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.address__item {
-  margin-bottom: 9px;
-}
-.address__item:last-child {
-  margin-bottom: 0;
-}
 .address__reach {
   color: var(--color-white);
   font-style: normal;
